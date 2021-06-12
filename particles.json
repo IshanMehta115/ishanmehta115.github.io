@@ -10,7 +10,7 @@
             "value":0.8
         },
         "size":{
-            "value":6
+            "value":1
         },
         "line_linked":{
             "color":"#FFFFFF"
@@ -29,11 +29,11 @@
         },
         "modes":{
             "repulse":{
-                "distance":30,
+                "distance":10,
                 "duration":1
             },
             "push":{
-                "partiicles_nb":1
+                "partiicles_nb":10
             }
         }
     }
