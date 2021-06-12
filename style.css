@@ -1,5 +1,5 @@
 html{
-    height: 7000px;
+    height: 9000px;
     scroll-behavior: smooth;
 }
 body{
@@ -445,7 +445,8 @@ img{
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: red; */
+    /* font-weight: bolder; */
+    /* background-color: yellowgreen; */
 }
 #page5 .btn{
     left:50%;
@@ -454,11 +455,12 @@ img{
     width: 30%;
     position: absolute;
     transform: translate(-50%,-50%);
+    border-radius: 10px;
     /* background-color: yellowgreen; */
 }
-/* #page5 #particles-js{
-    width: 80%;
-} */
+#page5 #particles-js{
+    z-index: -1;
+}
 
 .scroller h1{
     margin-bottom: 1500px;

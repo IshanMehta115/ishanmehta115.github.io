@@ -1,20 +1,30 @@
 var factor = 6;
-var dist = 250;
+var dist = 350;
 var y_coordinate = 1;
 var x_coordinate = 200;
 var page_numbers = 5;
 
 
-loading = function(){
-  
+del_load = function(){
   var t1 = document.getElementById("loader");
+  t1.remove();
+}
+
+var still_loading = true;
+
+
+loading = function(){
+  var t1 = document.getElementById("loader");
+  window.scrollTo(0, 0);
   // t1.style.transition = "ease";
   // t2.style.transition = "ease";
   // t2.style.display = "none";
   // t1.style.display = "initial";
   console.log("in function");
   t1.style.opacity = "0";
-  t1.style.transition = "opacity 1s";
+  t1.style.transition = "opacity 0.5s";
+  setTimeout(del_load,600);
+  still_loading = false;
 }
 window.onload = function(){
     var index = window.location.href.indexOf("#page");
@@ -71,22 +81,25 @@ function opacity_value(mid_point,cur_pos){
 
 window.onscroll = function(){
 
+    if(still_loading){
+      return;
+    }
     var name,x;
     name = document.getElementById("name");
     x = pageYOffset/factor;
     name.style.transform = "perspective(400px) translateZ("+(-x)+"px)";
 
-    name = document.getElementById("projects");
-    x = pageYOffset/factor-dist*2;
-    if(x>-100 && x<100)
-        name.style.transform = "perspective(400px) translateZ("+(x)+"px)";
+    // name = document.getElementById("projects");
+    // x = pageYOffset/factor-dist*2;
+    // if(x>-100 && x<100)
+    //     name.style.transform = "perspective(400px) translateZ("+(x)+"px)";
 
-    name = document.getElementById("c_items");
-    x = pageYOffset/factor-dist*3;
-    if(x>10 && x<90)
-        name.style.transform = "perspective(400px) translateZ("+(x)+"px)";
+    // name = document.getElementById("c_items");
+    // x = pageYOffset/factor-dist*3;
+    // if(x>10 && x<90)
+    //     name.style.transform = "perspective(400px) translateZ("+(x)+"px)";
 
-    var headings = document.getElementsByClassName("section-title");
+    // var headings = document.getElementsByClassName("section-title");
     // console.log(headings.length);
 
     // var x = pageYOffset/factor;
