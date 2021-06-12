@@ -4,6 +4,18 @@ var y_coordinate = 1;
 var x_coordinate = 200;
 var page_numbers = 5;
 
+
+loading = function(){
+  
+  var t1 = document.getElementById("loader");
+  // t1.style.transition = "ease";
+  // t2.style.transition = "ease";
+  // t2.style.display = "none";
+  // t1.style.display = "initial";
+  console.log("in function");
+  t1.style.opacity = "0";
+  t1.style.transition = "opacity 1s";
+}
 window.onload = function(){
     var index = window.location.href.indexOf("#page");
     if(index!=-1){
@@ -38,6 +50,7 @@ window.onload = function(){
     //     op_value=1;
     // }
     // temp.style.opacity = op_value;
+    setTimeout(loading,3000);
 }
 function opacity_value(mid_point,cur_pos){
     var x1,x2,y1,y2;
