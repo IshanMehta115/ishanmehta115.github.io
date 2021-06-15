@@ -19,6 +19,7 @@ body{
     min-height: 90vh;
     min-width: 90vw;
     background-color: rgb(40,40,45);
+    /* background-color: red; */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -458,9 +459,12 @@ img{
     border-radius: 10px;
     /* background-color: yellowgreen; */
 }
-#page5 #particles-js{
-    z-index: -1;
-}
+/* #particles-js{
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+} */
 
 .scroller h1{
     margin-bottom: 1500px;
@@ -468,7 +472,7 @@ img{
     color: transparent;
 }
 .loader{
-    z-index: 2;
+    z-index: 1;
     display: flex;
     width: 100%;
     height: 100vh;
@@ -486,11 +490,16 @@ img{
     animation: rotate-anim 2.5s infinite;
     box-shadow: 0px 0px 10px white;
 }
-.particles{
+#par{
     z-index: 1;
+    display: flex;
     width: 100%;
     height: 100vh;
     background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
 }
 /* .loader .bar{ */
     /* height: 2px; */

@@ -27,6 +27,7 @@ loading = function(){
   still_loading = false;
 }
 window.onload = function(){
+  // console.log(document.getElementById("loader"))
     var index = window.location.href.indexOf("#page");
     if(index!=-1){
         console.log(index);
