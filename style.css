@@ -106,7 +106,7 @@ img{
 #page1 .upper{
     color: transparent;
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: .2rem;
     width: 95%;
     /* animation: fade-in 3s ease forwards; */
     margin-left: 100px;
@@ -483,6 +483,7 @@ img{
     position: fixed;
     /* left: 10px; */
     background-color: transparent;
+    background-color: rgb(40,40,45);
     /* background-color: rgb(3, 3, 3); */
 }
 .loader .box{
@@ -500,7 +501,7 @@ img{
     /* background-color: red; */
     /* background-color: rgb(40,40,45); */
     background-color: transparent;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
 }
@@ -549,3 +550,4 @@ img{
         /* background-color: crimson; */
     /* } */
 /* } */
+
