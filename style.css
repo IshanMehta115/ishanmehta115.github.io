@@ -501,7 +501,7 @@ img{
     /* background-color: red; */
     /* background-color: rgb(40,40,45); */
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 }
