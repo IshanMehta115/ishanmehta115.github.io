@@ -8,7 +8,7 @@ var blocked_time;
 
 window.onload = function(){
 
-  blocked_time = Date.now();
+  set_y_offset(0);
   const contentHeight = document.documentElement.scrollHeight;
   const viewportHeight = window.innerHeight;
   maxScrollY = contentHeight - viewportHeight;
