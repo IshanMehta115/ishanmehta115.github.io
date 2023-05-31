@@ -19,7 +19,6 @@ window.onload = function(){
   next_button = document.getElementById('next_btn');
   prev_button = document.getElementById('prev_btn');
   slide_width = slides[0].getBoundingClientRect().width;
-  console.log(slide_width)
   cur_slide_index = 0;
   carousel_change_time = 10000;
 
@@ -176,7 +175,6 @@ set_new_slide = function (target_index) {
   }
   cur_slide_index = target_index;
 
-  console.log(cur_slide_index);
 }
 move_to_next_slide = function () {
   var target_slide_index = (cur_slide_index + 1) % (total_slides);
