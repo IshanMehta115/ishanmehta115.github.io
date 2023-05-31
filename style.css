@@ -37,6 +37,7 @@ img{
     font-size: 3.5rem;
     font-family: 'Bruno Ace';
     text-align: center;
+    margin-top: 5%;
 }
 .section-title span{
     color: var(--theme);
@@ -407,9 +408,11 @@ img{
     padding: 10px;
 }
 #page4{
+    background-color: transparent;
     position:absolute;
     z-index: 2;
     width: 100%;
+    height: 100%;
     min-height: inherit;
     display: flex;
     flex-direction: column;
@@ -565,6 +568,7 @@ img{
 
     .section-title {
         font-size: 2.2rem;
+        margin-top: 10%;
     }
 
     #page2 .info {
@@ -592,7 +596,7 @@ img{
     .project_info {
         width: 90%;
         height: auto;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #project_btn {
@@ -635,6 +639,7 @@ img{
 
     .section-title {
         font-size: 2.7rem;
+        margin-top: 10%;
     }
 
     #page2 .info {
@@ -663,7 +668,7 @@ img{
     .project_info{
         width: 90%;
         height: auto;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     #project_btn{
         font-size: 0.8rem;
