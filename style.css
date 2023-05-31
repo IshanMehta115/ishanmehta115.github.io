@@ -36,6 +36,7 @@ img{
     color: white;
     font-size: 3.5rem;
     font-family: 'Bruno Ace';
+    text-align: center;
 }
 .section-title span{
     color: var(--theme);
@@ -257,6 +258,7 @@ img{
     z-index: 4;
     min-height:inherit;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,26 +279,26 @@ img{
     z-index: 3;
     min-height: inherit;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    background-color: transparent;
 }
 #project_carousel{
-    width: 80%;
-    height: 350px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    width: 95%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    padding: 1%;
 }
 #projects_slider{
     width: 100%;
-    height: 85%;
+    height: 90%;
     background-color: transparent;
     overflow: hidden;
     position: relative;
@@ -322,6 +324,7 @@ img{
     align-items: center;
     color: white;
     font-family: 'Bruno Ace';
+    text-align: center;
 }
 .project_body{
     height: 80%;
@@ -329,15 +332,18 @@ img{
     background-color: transparent;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .project_img{
-    width: 50%;
+    width: 35%;
     height: 100%;
-    background-color: transparent;
+    background-color: rgb(40, 40, 45);;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 .project_img img{
     width: auto;
@@ -345,9 +351,10 @@ img{
     transition: 0.5s ease transform;
     border: 2px solid white;
     border-radius: 10px;
+    object-fit: contain;
 }
 .project_info {
-    width: 50%;
+    width: 65%;
     height: 100%;
     background-color: rgb(40, 40, 45);
     display: flex;
@@ -356,21 +363,26 @@ img{
     text-align: center;
     color: white;
     font-family: 'consolas';
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .project_link{
-    color: #dc143c;
+    margin-top: 5px;
+    color: white;
     text-decoration: none;
     cursor: pointer;
+    font-size: 0.8rem;
 }
 #project_carousel_controller{
     width: 100%;
-    height: 15%;
+    height: 10%;
     background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0px;
 }
 #project_carousel_controller p {
     margin-left: 5%;
@@ -391,7 +403,8 @@ img{
     transition: 0.5s ease transform;
 }
 #project_btn{
-    font-size: 1rem;
+    margin-bottom: 15px;
+    font-size:1rem;
     padding: 10px;
 }
 #page4{
@@ -576,18 +589,18 @@ img{
     }
 
     .project_info {
-        width: 100%;
-        height: 50%;
-        font-size: 0.9rem;
+        width: 90%;
+        height: auto;
+        font-size: 0.7rem;
     }
 
     #project_btn {
         font-size: 0.8rem;
     }
 
-    #project_carousel {
+    /* #project_carousel {
         height: 450px;
-    }
+    } */
     #project_carousel_controller img:active {
         transform: scale(1.5);
     }
@@ -643,16 +656,16 @@ img{
         height: 50%;
     }
     .project_info{
-        width: 100%;
-        height: 50%;
-        font-size: 1rem;
+        width: 90%;
+        height: auto;
+        font-size: 0.8rem;
     }
     #project_btn{
         font-size: 0.8rem;
     }
-    #project_carousel{
+    /* #project_carousel{
         height: 400px;
-    }
+    } */
     #project_carousel_controller img:active {
         transform: scale(1.5);
     }
