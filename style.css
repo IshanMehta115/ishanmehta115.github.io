@@ -641,7 +641,7 @@ tspan {
 .project_info p{
     font-family: "Arial";
     /* font-size: 0.9rem; */
-    font-size: 80%;
+    font-size: 90%;
     color: white;
     /* color: var(--theme); */
     font-weight:500;
