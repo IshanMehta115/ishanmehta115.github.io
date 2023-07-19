@@ -1,7 +1,7 @@
 {
     "particles":{
         "number":{
-            "value":100
+            "value":50
         },
         "color":{
             "value":"#FFFFFF"
@@ -10,11 +10,11 @@
             "value":1
         },
         "size":{
-            "value":1
+            "value":1.7
         },
         "line_linked":{
             "color":"#dc143c",
-            "distance": 150
+            "distance": 250
         }
     },
     "interactivity":{

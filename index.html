@@ -6,74 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishan Mehta</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bruno Ace">
+    <link rel="stylesheet" as="style" href="https://fonts.googleapis.com/css?family=Bruno Ace">
     <link rel="icon" href="favicon.png" type="image/png">
-    <style>
-        .section-title, .btn{
-            font-family: 'Bruno Ace';
-        }
-    </style>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+    
+    
+        
+    </style>
 </head>
 <body>
     <div id="par"></div>
     <div id="main_screen">
+        <div class="loader">
+            <div class="loading"></div>
+        </div>
         <div id="page1">
             <div class="upper">
                 <h1 id="_1">Hi,<span></span></h1>
                 <h1 id="_2">I am<span></span></h1>
             </div>
-            <svg id="name" width="1275" height="111" viewBox="0 0 1275 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.109375" y="0.171875" width="1275" height="111"
-                    fill="black">
-                    <rect fill="white" x="0.109375" y="0.171875" width="1275" height="111" />
-                    <path d="M19.5234 106H5.10938V5.17188H19.5234V106Z" />
-                    <path
-                        d="M155.086 77.1719C155.086 81.2031 154.336 84.9766 152.836 88.4922C151.336 91.9609 149.273 95.0078 146.648 97.6328C144.07 100.211 141.023 102.25 137.508 103.75C134.039 105.25 130.312 106 126.328 106H38.7188V91.5859H126.328C128.344 91.5859 130.219 91.2109 131.953 90.4609C133.688 89.7109 135.188 88.6797 136.453 87.3672C137.766 86.0547 138.797 84.5312 139.547 82.7969C140.297 81.0156 140.672 79.1406 140.672 77.1719C140.672 75.2031 140.297 73.3516 139.547 71.6172C138.797 69.8828 137.766 68.3594 136.453 67.0469C135.188 65.7344 133.688 64.7031 131.953 63.9531C130.219 63.2031 128.344 62.8281 126.328 62.8281H67.5469C63.6094 62.8281 59.8828 62.0781 56.3672 60.5781C52.8516 59.0781 49.7812 57.0391 47.1562 54.4609C44.5781 51.8359 42.5156 48.7656 40.9688 45.25C39.4688 41.7344 38.7188 37.9844 38.7188 34C38.7188 30.0625 39.4688 26.3359 40.9688 22.8203C42.5156 19.3047 44.5781 16.2578 47.1562 13.6797C49.7812 11.0547 52.8516 8.99219 56.3672 7.49219C59.8828 5.94531 63.6094 5.17188 67.5469 5.17188H147.914V19.5859H67.5469C65.5781 19.5859 63.7031 19.9609 61.9219 20.7109C60.1875 21.4609 58.6641 22.4922 57.3516 23.8047C56.0391 25.1172 55.0078 26.6641 54.2578 28.4453C53.5078 30.1797 53.1328 32.0312 53.1328 34C53.1328 35.9688 53.5078 37.8438 54.2578 39.625C55.0078 41.3594 56.0391 42.8828 57.3516 44.1953C58.6641 45.5078 60.1875 46.5391 61.9219 47.2891C63.7031 48.0391 65.5781 48.4141 67.5469 48.4141H126.328C130.312 48.4141 134.039 49.1875 137.508 50.7344C141.023 52.2344 144.07 54.2969 146.648 56.9219C149.273 59.5 151.336 62.5469 152.836 66.0625C154.336 69.5312 155.086 73.2344 155.086 77.1719Z" />
-                    <path
-                        d="M278.484 106H264.07V62.8281H193.617V48.4141H264.07V5.17188H278.484V106ZM186.445 106H172.031V5.17188H186.445V106Z" />
-                    <path></path>
-                    <path
-                        d="M455.883 106H441.469V5.17188H448.641C453.328 5.17188 458.297 5.78125 463.547 7C468.844 8.21875 474.234 9.97656 479.719 12.2734C485.203 14.5703 490.664 17.3594 496.102 20.6406C501.586 23.875 506.883 27.5547 511.992 31.6797C517.102 35.8047 521.906 40.3047 526.406 45.1797C530.906 50.0078 534.938 55.1641 538.5 60.6484V5.17188H552.914V106H538.5C538.5 98.5938 537.211 91.4688 534.633 84.625C532.055 77.7344 528.609 71.2422 524.297 65.1484C519.984 59.0547 515.016 53.4531 509.391 48.3438C503.766 43.1875 497.883 38.6641 491.742 34.7734C485.648 30.8828 479.508 27.6953 473.32 25.2109C467.133 22.6797 461.32 20.9922 455.883 20.1484V106Z" />
-                    <path
-                        d="M703.734 106H689.32V55.5859C689.32 50.6172 688.383 45.9531 686.508 41.5938C684.633 37.2344 682.055 33.4375 678.773 30.2031C675.539 26.9219 671.719 24.3438 667.312 22.4688C662.953 20.5469 658.289 19.5859 653.32 19.5859H645.586V106H631.172V5.17188H653.32C657.914 5.17188 662.32 5.78125 666.539 7C670.805 8.17188 674.789 9.83594 678.492 11.9922C682.195 14.1484 685.57 16.7266 688.617 19.7266C691.664 22.7266 694.312 26.0547 696.562 29.7109C698.766 26.0547 701.391 22.7266 704.438 19.7266C707.484 16.7266 710.859 14.1484 714.562 11.9922C718.266 9.83594 722.227 8.17188 726.445 7C730.711 5.78125 735.141 5.17188 739.734 5.17188H761.953V106H747.539V19.5859H739.734C734.766 19.5859 730.102 20.5469 725.742 22.4688C721.383 24.3438 717.562 26.9219 714.281 30.2031C711.047 33.4375 708.469 37.2344 706.547 41.5938C704.672 45.9531 703.734 50.6172 703.734 55.5859V106Z" />
-                    <path
-                        d="M890.414 106H786.141V5.17188H890.414V19.5859H800.555V91.5859H890.414V106ZM878.18 62.8281H807.727V48.4141H878.18V62.8281Z" />
-                    <path
-                        d="M1014.8 106H1000.38V62.8281H929.93V48.4141H1000.38V5.17188H1014.8V106ZM922.758 106H908.344V5.17188H922.758V106Z" />
-                    <path d="M1093.69 106H1079.27V19.5859H1028.3V5.17188H1144.66V19.5859H1093.69V106Z" />
-                    <path></path>
-                </mask>
-                <path id="l1" d="M19.5234 106H5.10938V5.17188H19.5234V106Z" stroke="white" stroke-width="10"
-                    mask="url(#path-1-outside-1)" />
-                <path id="l2"
-                    d="M155.086 77.1719C155.086 81.2031 154.336 84.9766 152.836 88.4922C151.336 91.9609 149.273 95.0078 146.648 97.6328C144.07 100.211 141.023 102.25 137.508 103.75C134.039 105.25 130.312 106 126.328 106H38.7188V91.5859H126.328C128.344 91.5859 130.219 91.2109 131.953 90.4609C133.688 89.7109 135.188 88.6797 136.453 87.3672C137.766 86.0547 138.797 84.5312 139.547 82.7969C140.297 81.0156 140.672 79.1406 140.672 77.1719C140.672 75.2031 140.297 73.3516 139.547 71.6172C138.797 69.8828 137.766 68.3594 136.453 67.0469C135.188 65.7344 133.688 64.7031 131.953 63.9531C130.219 63.2031 128.344 62.8281 126.328 62.8281H67.5469C63.6094 62.8281 59.8828 62.0781 56.3672 60.5781C52.8516 59.0781 49.7812 57.0391 47.1562 54.4609C44.5781 51.8359 42.5156 48.7656 40.9688 45.25C39.4688 41.7344 38.7188 37.9844 38.7188 34C38.7188 30.0625 39.4688 26.3359 40.9688 22.8203C42.5156 19.3047 44.5781 16.2578 47.1562 13.6797C49.7812 11.0547 52.8516 8.99219 56.3672 7.49219C59.8828 5.94531 63.6094 5.17188 67.5469 5.17188H147.914V19.5859H67.5469C65.5781 19.5859 63.7031 19.9609 61.9219 20.7109C60.1875 21.4609 58.6641 22.4922 57.3516 23.8047C56.0391 25.1172 55.0078 26.6641 54.2578 28.4453C53.5078 30.1797 53.1328 32.0312 53.1328 34C53.1328 35.9688 53.5078 37.8438 54.2578 39.625C55.0078 41.3594 56.0391 42.8828 57.3516 44.1953C58.6641 45.5078 60.1875 46.5391 61.9219 47.2891C63.7031 48.0391 65.5781 48.4141 67.5469 48.4141H126.328C130.312 48.4141 134.039 49.1875 137.508 50.7344C141.023 52.2344 144.07 54.2969 146.648 56.9219C149.273 59.5 151.336 62.5469 152.836 66.0625C154.336 69.5312 155.086 73.2344 155.086 77.1719Z"
-                    stroke="white" stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l3"
-                    d="M278.484 106H264.07V62.8281H193.617V48.4141H264.07V5.17188H278.484V106ZM186.445 106H172.031V5.17188H186.445V106Z"
-                    stroke="white" stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l4" class="Letter_H"
-                    d="M417.281 106H402.867V77.1719H322.43V62.8281H402.867V19.5859H351.188C346.266 19.5859 341.625 20.5469 337.266 22.4688C332.906 24.3438 329.109 26.9219 325.875 30.2031C322.641 33.4375 320.062 37.2344 318.141 41.5938C316.266 45.9531 315.328 50.6172 315.328 55.5859V106H300.914V55.5859C300.914 50.9453 301.5 46.4922 302.672 42.2266C303.891 37.9141 305.578 33.9062 307.734 30.2031C309.938 26.4531 312.562 23.0547 315.609 20.0078C318.703 16.9141 322.102 14.2656 325.805 12.0625C329.555 9.85938 333.562 8.17188 337.828 7C342.094 5.78125 346.547 5.17188 351.188 5.17188H417.281V106Z"
-                    stroke="white" stroke-width="5" mask="url(#path-1-outside-1)" />
-                <path id="l5"
-                    d="M455.883 106H441.469V5.17188H448.641C453.328 5.17188 458.297 5.78125 463.547 7C468.844 8.21875 474.234 9.97656 479.719 12.2734C485.203 14.5703 490.664 17.3594 496.102 20.6406C501.586 23.875 506.883 27.5547 511.992 31.6797C517.102 35.8047 521.906 40.3047 526.406 45.1797C530.906 50.0078 534.938 55.1641 538.5 60.6484V5.17188H552.914V106H538.5C538.5 98.5938 537.211 91.4688 534.633 84.625C532.055 77.7344 528.609 71.2422 524.297 65.1484C519.984 59.0547 515.016 53.4531 509.391 48.3438C503.766 43.1875 497.883 38.6641 491.742 34.7734C485.648 30.8828 479.508 27.6953 473.32 25.2109C467.133 22.6797 461.32 20.9922 455.883 20.1484V106Z"
-                    stroke="white" stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l6"
-                    d="M703.734 106H689.32V55.5859C689.32 50.6172 688.383 45.9531 686.508 41.5938C684.633 37.2344 682.055 33.4375 678.773 30.2031C675.539 26.9219 671.719 24.3438 667.312 22.4688C662.953 20.5469 658.289 19.5859 653.32 19.5859H645.586V106H631.172V5.17188H653.32C657.914 5.17188 662.32 5.78125 666.539 7C670.805 8.17188 674.789 9.83594 678.492 11.9922C682.195 14.1484 685.57 16.7266 688.617 19.7266C691.664 22.7266 694.312 26.0547 696.562 29.7109C698.766 26.0547 701.391 22.7266 704.438 19.7266C707.484 16.7266 710.859 14.1484 714.562 11.9922C718.266 9.83594 722.227 8.17188 726.445 7C730.711 5.78125 735.141 5.17188 739.734 5.17188H761.953V106H747.539V19.5859H739.734C734.766 19.5859 730.102 20.5469 725.742 22.4688C721.383 24.3438 717.562 26.9219 714.281 30.2031C711.047 33.4375 708.469 37.2344 706.547 41.5938C704.672 45.9531 703.734 50.6172 703.734 55.5859V106Z"
-                    stroke="white" stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l7"
-                    d="M890.414 106H786.141V5.17188H890.414V19.5859H800.555V91.5859H890.414V106ZM878.18 62.8281H807.727V48.4141H878.18V62.8281Z"
-                    stroke="white" stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l8"
-                    d="M1014.8 106H1000.38V62.8281H929.93V48.4141H1000.38V5.17188H1014.8V106ZM922.758 106H908.344V5.17188H922.758V106Z"
-                    stroke="white" stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l9" d="M1093.69 106H1079.27V19.5859H1028.3V5.17188H1144.66V19.5859H1093.69V106Z" stroke="white"
-                    stroke-width="10" mask="url(#path-1-outside-1)" />
-                <path id="l10" class="Letter_H"
-                    d="M1269.89 106H1255.48V77.1719H1175.04V62.8281H1255.48V19.5859H1203.8C1198.88 19.5859 1194.23 20.5469 1189.88 22.4688C1185.52 24.3438 1181.72 26.9219 1178.48 30.2031C1175.25 33.4375 1172.67 37.2344 1170.75 41.5938C1168.88 45.9531 1167.94 50.6172 1167.94 55.5859V106H1153.52V55.5859C1153.52 50.9453 1154.11 46.4922 1155.28 42.2266C1156.5 37.9141 1158.19 33.9062 1160.34 30.2031C1162.55 26.4531 1165.17 23.0547 1168.22 20.0078C1171.31 16.9141 1174.71 14.2656 1178.41 12.0625C1182.16 9.85938 1186.17 8.17188 1190.44 7C1194.7 5.78125 1199.16 5.17188 1203.8 5.17188H1269.89V106Z"
-                    stroke="white" stroke-width="5" mask="url(#path-1-outside-1)" />
-            </svg>
+            <div class="brand">
+                <div class="base">
+                    <svg class="my_svg" viewBox="0 0 25 25">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Bruno Ace"
+                            stroke-width="0.7">
+                            <tspan class="letter_1 normal_letter">I</tspan><tspan class="letter_2 normal_letter">S</tspan><tspan class="letter_3 normal_letter">H</tspan><tspan class="letter_4 colored_letter">A</tspan><tspan class="letter_5 normal_letter">N</tspan>
+                        </text>
+                    </svg>
+                </div>
+                <div class="base2">
+                    <svg class="my_svg" viewBox="0 0 25 25">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Bruno Ace"
+                            stroke-width="0.7">
+                            <tspan class="letter_6 normal_letter">M</tspan><tspan class="letter_7 normal_letter">E</tspan><tspan class="letter_8 normal_letter">H</tspan><tspan class="letter_9 normal_letter">T</tspan><tspan class="letter_10 colored_letter">A</tspan>
+                        </text>
+            
+                    </svg>
+                </div>
+            </div>
             <div class="lower">
                 <h1 id="_4">Welcome to my website.<span></span></h1>
             </div>
@@ -89,54 +61,87 @@
             <div id="project_carousel">
                 <div id="projects_slider">
                     <div class="project">
-                        <div class="project_name">Color Switch Game<a class="project_link" href="https://github.com/IshanMehta115/Color_switch_game" target="_blank">(Click to View More)</a></div>
+                        <!-- <div class="project_name">Color Switch Game<a class="project_link" href="https://github.com/IshanMehta115/Color_switch_game" target="_blank">(Click to View More)</a></div> -->
                         <div class="project_body">
                             <div class="project_img">
                                 <img src="pics/color_switch.png" alt="Screenshot of the game">
                             </div>
                             <div class="project_info">
-                                Color Switch: A JavaFX college project replicating the addictive mobile game. Stunning visuals and challenging gameplay inspired by the original.
+                                <p><br>
+                                    <span class="project_name">Color Switch</span><a href="https://github.com/IshanMehta115/Color_switch_game" class="project_link" target="_blank">View More</a><br><br>
+                                    A desktop version of the famous mobile game - Color Switch built using object-oriented design patterns and programming.<br><br>
+                                    <img class="badge" src="https://img.shields.io/badge/-Java-ed8b00?style=flat&logo=openjdk&logoColor=white&labelColor=ed8b00"
+                                        height="30">
+                                    <img class="badge" src="https://img.shields.io/badge/-JavaFX-3776ab?style=flat&logo=openjdk&logoColor=white&labelColor=3776ab"
+                                        height="30">
+                                    <img class="badge" src="https://img.shields.io/badge/-FXML-f7df1e?style=flat&logo=JavaScript&logoColor=white&labelColor=f7df1e"
+                                        height="30">
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="project">
-                        <div class="project_name">Portfolio Website<a class="project_link"
-                                href="https://github.com/IshanMehta115/ishanmehta115.github.io" target="_blank">(Click to View More)</a></div>
+                        <!-- <div class="project_name">Portfolio Website<a class="project_link" href="https://github.com/IshanMehta115/ishanmehta115.github.io" target="_blank">(Click to View More)</a></div> -->
                         <div class="project_body">
                             <div class="project_img">
-                                <img src="pics/webpage.png" alt="Screenshot of the homepage">
+                                <img src="pics/webpage_screenshot.png" alt="Screenshot of the homepage">
                             </div>
                             <div class="project_info">
-                                A captivating portfolio website with a 3D scroll effect, showcasing projects, designs, and skills. Engaging animations
-                                and interactive elements provide an immersive user experience, highlighting expertise and leaving a lasting impression.
+                                <p><br>
+                                    <span class="project_name">Portfolio Website</span><a href="https://github.com/IshanMehta115/ishanmehta115.github.io" class="project_link" target="_blank">View More</a><br><br>
+                                    Captivating portfolio website showcasing my projects. Has a unique 3D effect, stunning design, and mesmerizing animations.<br><br>
+                                    <img class="badge" src="https://img.shields.io/badge/-HTML5-e34f26?style=flat&logo=HTML5&logoColor=white&labelColor=e34f26"
+                                        height="30">
+                                    <img class="badge" src="https://img.shields.io/badge/-CSS3-1572b6?style=flat&logo=CSS3&logoColor=white&labelColor=1572b6" height="30">
+                                    <img class="badge" src="https://img.shields.io/badge/-JavaScript-f7df1e?style=flat&logo=JavaScript&logoColor=white&labelColor=f7df1e"
+                                        height="30">
+                                </p>
+                                <!-- <p>A captivating portfolio website with a 3D scroll effect, showcasing projects, designs, and skills. Engaging animations
+                                and interactive elements provide an immersive user experience, highlighting expertise and leaving a lasting impression.</p> -->
                             </div>
                         </div>
                     </div>
                     <div class="project">
-                        <div class="project_name">Goblin Game<a class="project_link"
-                                href="https://github.com/IshanMehta115/Goblin-game" target="_blank">(Click to View More)</a>
-                        </div>
+                        <!-- <div class="project_name">Goblin Game<a class="project_link" href="https://github.com/IshanMehta115/Goblin-game" target="_blank">(Click to View More)</a> </div> -->
                         <div class="project_body">
                             <div class="project_img">
-                                <img src="pics/goblin_game.PNG" alt="Screenshot of the game">
+                                <img src="pics/goblin_game.png" alt="Screenshot of the game">
                             </div>
                             <div class="project_info">
-                                A 2D survival game made in python using pygame where you shoot and kill goblins for points. Use your skills and reflexes
-                                to survive the onslaught. Thrilling and addictive.
+                            <p><br>
+                                <span class="project_name">Goblin Game</span><a href="https://github.com/IshanMehta115/Goblin-game" class="project_link" target="_blank">View More</a><br><br>
+                                A thrilling and addictive 2D survival game where you kill goblins from bullets and bombs to survive and earn points.<br><br>
+                                <img class="badge" src="https://img.shields.io/badge/-Python-3776ab?style=flat&logo=Python&logoColor=white&labelColor=3776ab"
+                                    height="30">
+                                <img class="badge" src="https://img.shields.io/badge/-Pygame-3ddc84?style=flat&logo=Python&logoColor=white&labelColor=3ddc84"
+                                    height="30">
+                            </p>
                             </div>
                         </div>
                     </div>
                     <div class="project">
-                        <div class="project_name">All-Pass Password Manager<a class="project_link" href="https://github.com/IshanMehta115/AllPass-Password-Manager"
-                                target="_blank">(Click to View More)</a>
-                        </div>
+                        <!-- <div class="project_name">All-Pass Password Manager<a class="project_link" href="https://github.com/IshanMehta115/AllPass-Password-Manager" target="_blank">(Click to View More)</a> </div>-->
                         <div class="project_body">
                             <div class="project_img">
-                                <img src="pics/allpass.png" alt="Screenshot of the homepage">
+                                <img src="pics/all_pass.png" alt="Screenshot of the homepage">
                             </div>
                             <div class="project_info">
-                                All-Pass Password Manager is a full-stack project developed in Django. It is designed to prioritize both cyber security
-                                and usability. The users can securely store and manage their passwords, ensuring their online accounts are protected.
+                                <p><br>
+                                    <span class="project_name">All-Pass</span><a href="https://github.com/IshanMehta115/AllPass-Password-Manager" class="project_link" target="_blank">View More</a><br><br>
+                                    Full-stack password manager project. Supports basic CRUD operations on database, OTP verification and protection from XSS and CSRF attacks for cybersecurity.<br><br>
+                                    <img class="badge" src="https://img.shields.io/badge/-Django-092e20?style=flat&logo=Django&logoColor=white&labelColor=092e20"
+                                        height="30">
+                                    <img class="badge" src="https://img.shields.io/badge/-Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white&labelColor=7952B3"
+                                        height="30">
+                                    <img class="badge"
+                                        src="https://img.shields.io/badge/-HTML5-e34f26?style=flat&logo=HTML5&logoColor=white&labelColor=e34f26"
+                                        height="30">
+                                    <img class="badge"
+                                        src="https://img.shields.io/badge/-CSS3-1572b6?style=flat&logo=CSS3&logoColor=white&labelColor=1572b6" height="30">
+                                    <img class="badge"
+                                        src="https://img.shields.io/badge/-JavaScript-f7df1e?style=flat&logo=JavaScript&logoColor=white&labelColor=f7df1e"
+                                        height="30">
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -147,7 +152,7 @@
                     <img id="next_btn" src="pics/arrow_right.png" alt="right_arrow">
                 </div>
             </div>
-            <a id="project_btn" class="btn" href="https://github.com/IshanMehta115" target="_blank">View all projects</a>
+            <!-- <a id="project_btn" class="btn" href="https://github.com/IshanMehta115" target="_blank">View all projects</a> -->
         </div>
         <div id="page4">
             <div class="section-title" id="cntme">Contact <span>Me</span></div>

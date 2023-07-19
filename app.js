@@ -8,6 +8,27 @@ var blocked_time;
 
 window.onload = function(){
 
+
+  const loader = document.querySelector('.loader');
+  setTimeout(function () {
+    loader.style.opacity = '0';
+    loader.style.zIndex = '-100';
+  }, 1000);
+
+  for(var i=1;i<=10;i++){
+    var temp_ele = document.querySelector('.letter_' + String(i));
+    temp_ele.style.animationPlayState = "running";
+  }
+  var temp_ele = document.querySelector("#_1 span");
+  temp_ele.style.animationPlayState = "running";
+  var temp_ele = document.querySelector("#_2 span");
+  temp_ele.style.animationPlayState = "running";
+  var temp_ele = document.querySelector("#_4 span");
+  temp_ele.style.animationPlayState = "running";
+
+  console.log("here")
+
+
   set_y_offset(0);
   const contentHeight = document.documentElement.scrollHeight;
   const viewportHeight = window.innerHeight;
@@ -37,7 +58,7 @@ window.onload = function(){
   ele = document.getElementById('slide_number');
   ele.textContent = "1 / " + String(total_slides);
   setInterval(move_to_next_slide, carousel_change_time);
-  setInterval(correct_y_offset, 3000);
+  setInterval(correct_y_offset, 500);
 
   for(var i=0;i<page_numbers;i++){
       var op_value;
@@ -74,7 +95,7 @@ return ((y2-y1)/(x2-x1))*(cur_pos-x1)+y1;
 }
 
 function set_y_offset(yOffset){
-  blocked_time = Date.now() + 1000;
+  blocked_time = Date.now() + 500;
   window.scrollTo({
     top: yOffset,
     behavior: 'smooth'
@@ -91,12 +112,14 @@ function correct_y_offset(){
 
 window.onscroll = function(){
 
-    blocked_time = Date.now() + 1000; 
+  // return;
+
+    blocked_time = Date.now() + 500; 
 
     var name,x;
-    name = document.getElementById("name");
+    // name = document.getElementById("name");
     x = pageYOffset/factor;
-    name.style.transform = "perspective(400px) translateZ("+(-x)+"px)";
+    // name.style.transform = "perspective(400px) translateZ("+(-x)+"px)";
 
     for(var i=0;i<page_numbers;i++){
 
