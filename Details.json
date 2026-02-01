@@ -1,0 +1,268 @@
+{
+    "personal_info": {
+      "name": "Ishan Mehta",
+      "location": "Gurugram, India",
+      "email": "imehta115@gmail.com",
+      "phone": "+91 9958564827",
+      "linkedin": "https://www.linkedin.com/in/ishan-mehta-2357741a7/",
+      "portfolio": "https://ishanmehta115.github.io/",
+      "languages_known": ["English", "Hindi"]
+    },
+  
+    "professional_summary": {
+      "title": "Backend Engineer",
+      "experience_years": "2+",
+      "current_company": "Reliance Jio",
+      "core_focus": [
+        "High-scale backend systems",
+        "Microservices architecture",
+        "Cloud-native applications",
+        "Distributed & high-availability systems",
+        "End-to-end SDLC ownership"
+      ],
+      "primary_tech_stack": [
+        "Java",
+        "Spring Boot",
+        "Python",
+        "Redis",
+        "Distributed Systems",
+        "Low-latency APIs"
+      ]
+    },
+  
+    "core_competencies": [
+      "Software Development Life Cycle (SDLC)",
+      "API Development & RESTful Services",
+      "Distributed Systems Engineering",
+      "Performance Optimization & Scalability",
+      "Cloud-Native Application Development",
+      "Code Refactoring & Maintainability",
+      "Version Control & Code Collaboration",
+      "System Monitoring & Disaster Recovery",
+      "Agile & Cross-Functional Collaboration"
+    ],
+  
+    "education": {
+      "degree": "B.Tech",
+      "field": "Computer Science and Design",
+      "institution": "Indraprastha Institute of Information Technology (IIITD), New Delhi",
+      "graduation_year": 2023
+    },
+  
+    "certifications": [
+      "Machine Learning A-Z: AI, Python & R + ChatGPT Prize (Udemy)",
+      "Java FullStack Developer Specialization (Coursera)",
+      "Apache Kafka Essential Training",
+      "Getting Started with Elasticsearch on Google Cloud",
+      "Learning NGINX",
+      "Gradle for Java-Based Applications and Libraries",
+      "Redis Essential Training"
+    ],
+  
+    "technical_skills": {
+      "programming_languages": [
+        "Java",
+        "Python",
+        "C++",
+        "Golang",
+        "JavaScript",
+        "SQL"
+      ],
+      "frameworks_libraries": [
+        "Spring Boot",
+        "FastAPI",
+        "Angular",
+        "RESTful Microservices"
+      ],
+      "cloud_infrastructure": [
+        "Google Cloud Platform (GCP)",
+        "Docker",
+        "QEMU (Virtualization)",
+        "Git",
+        "PostgreSQL"
+      ],
+      "high_performance_middleware": [
+        "Redis (Caching, Rate Limiting)",
+        "Apache Kafka",
+        "WebRTC"
+      ],
+      "security_cryptography": [
+        "AES",
+        "RSA",
+        "Triple DES",
+        "Hash Functions",
+        "MAC",
+        "Public Key Cryptography",
+        "Symmetric Encryption",
+        "JWT",
+        "OAuth 2.0",
+        "BCrypt",
+        "SAML SSO",
+        "PBKDF2"
+      ],
+      "ci_cd_automation": [
+        "Jenkins",
+        "API Documentation Automation"
+      ],
+      "system_programming": [
+        "Compiler Design",
+        "Assembly Language Processing",
+        "Low-level Programming"
+      ],
+      "machine_learning": [
+        "Deep Learning",
+        "Convolutional Neural Networks (CNN)",
+        "Computer Vision",
+        "TensorFlow",
+        "Keras",
+        "Real-time ML Inference"
+      ]
+    },
+  
+    "work_experience": [
+      {
+        "company": "Reliance Jio",
+        "role": "Software Developer",
+        "location": "Gurugram, India",
+        "duration": "Aug 2023 – Present",
+        "responsibilities": [
+          "Designed modular headless authentication framework for MyJio, JioEvents, and JioFrames",
+          "Implemented multi-factor authentication (OAuth, SAML SSO, QR Login)",
+          "Built multi-data-center distributed systems with cross-DC Redis synchronization",
+          "Achieved 99.9% data consistency and improved disaster recovery",
+          "Led Infosec and VAPT remediation efforts; resolved all critical and high vulnerabilities",
+          "Developed payment APIs (ChargeIt module) with 10+ secure transaction endpoints",
+          "Refactored cryptographic utilities (AES) for thread safety under high concurrency",
+          "Built CI/CD tool for automated API documentation across microservices",
+          "Owned full SDLC from design to post-production optimization"
+        ]
+      }
+    ],
+  
+    "projects": [
+      {
+        "name": "Cloud Desktop Platform (SaaS)",
+        "url": "https://lockchatapp.com/",
+        "domain": "Cloud / SaaS / Virtualization",
+        "tech_stack": [
+          "Java",
+          "Spring Boot",
+          "Angular",
+          "QEMU (Nested Virtualization)",
+          "Docker",
+          "Google Cloud Platform",
+          "REST APIs",
+          "Razorpay",
+          "Google OAuth 2.0",
+          "BCrypt",
+          "Linux",
+          "Git"
+        ],
+        "key_contributions": [
+          "Designed browser-based cloud desktop platform for Windows and Linux",
+          "Built cloud orchestration engine for VM lifecycle automation on GCP",
+          "Implemented secure authentication, authorization, and billing",
+          "Enabled multi-tenant SaaS scalability"
+        ]
+      },
+      {
+        "name": "BitTorrent Client & Tracker",
+        "url": "https://github.com/IshanMehta115/go-torrent",
+        "domain": "Networking / P2P Systems",
+        "tech_stack": [
+          "Golang",
+          "TCP/IP",
+          "HTTP",
+          "BitTorrent Protocol",
+          "SHA-1",
+          "Concurrent Programming (Goroutines)",
+          "File I/O",
+          "Networking",
+          "Git"
+        ],
+        "key_contributions": [
+          "Built complete BitTorrent system (tracker, seeder, leecher)",
+          "Implemented file chunking and torrent metadata generation",
+          "Designed peer discovery using HTTP announce protocol",
+          "Enabled high-performance concurrent P2P communication"
+        ]
+      },
+      {
+        "name": "Assembler",
+        "url": "https://github.com/IshanMehta115/Assembler",
+        "domain": "Compiler Design / Low-level Programming",
+        "tech_stack": [
+          "Python",
+          "Assembly Language",
+          "Two-Pass Assembly",
+          "Symbol Table Management",
+          "Binary Conversion",
+          "File I/O",
+          "Error Handling",
+          "Git"
+        ],
+        "key_contributions": [
+          "Built a two-pass assembler that converts assembly code to machine code",
+          "Implemented symbol table management for labels and variables",
+          "Designed error checking for undefined variables, duplicates, and invalid instructions",
+          "Created binary conversion system for opcode and address generation"
+        ]
+      },
+      {
+        "name": "Smile-CNN",
+        "url": "https://github.com/IshanMehta115/Smile-CNN",
+        "domain": "Machine Learning / Computer Vision",
+        "tech_stack": [
+          "Python",
+          "Flask",
+          "TensorFlow",
+          "Keras",
+          "OpenCV",
+          "CNN",
+          "Computer Vision",
+          "Real-time Processing",
+          "AJAX",
+          "Tailwind CSS"
+        ],
+        "key_contributions": [
+          "Built real-time face and smile detection system using CNN",
+          "Developed custom CNN model trained on smile detection dataset",
+          "Implemented real-time webcam processing with OpenCV and Haar Cascade",
+          "Created Flask web application with dynamic AJAX updates for live predictions"
+        ]
+      },
+      {
+        "name": "Applied Cryptography",
+        "url": "https://github.com/IshanMehta115/Applied-Cryptography",
+        "domain": "Cryptography / Security",
+        "tech_stack": [
+          "Python",
+          "C++",
+          "AES",
+          "RSA",
+          "Triple DES",
+          "Hash Functions",
+          "MAC",
+          "Public Key Cryptography",
+          "Symmetric Encryption",
+          "Number Theory"
+        ],
+        "key_contributions": [
+          "Implemented AES encryption/decryption (128, 192, 256 bits) from scratch",
+          "Built RSA public-key cryptosystem with key generation, encryption, and decryption",
+          "Developed Triple DES implementation for symmetric encryption",
+          "Created TRIAD-AE (Authenticated Encryption), TRIAD-HASH, and TRIAD-MAC implementations"
+        ]
+      }
+    ],
+  
+    "soft_skills": [
+      "Negotiator",
+      "Team Player",
+      "Communicator",
+      "Decision Maker",
+      "Problem Solver",
+      "Resilient"
+    ]
+  }
+  

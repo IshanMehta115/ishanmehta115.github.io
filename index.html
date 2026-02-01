@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Mehta - Backend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" href="https://fonts.googleapis.com/css?family=Bruno Ace">
+</head>
+<body>
+    <div id="mobile-iframe-shell" style="display:none;">
+      <iframe
+        id="mobile-iframe"
+        src=""
+        frameborder="0"
+        scrolling="yes"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <!-- Loader Overlay (KEEP exactly one #loader) -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-spinner" aria-hidden="true"></div>
+            <p class="loader-message">View in large screen for best experience</p>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-name-wrapper">
+                <p class="hero-greeting">
+                    <span class="greeting-word" data-speed="1.1">Hi,</span>
+                    <span class="greeting-word" data-speed="0.7">I</span>
+                    <span class="greeting-word" data-speed="1.3">am</span>
+                </p>
+                <h1 class="hero-title">
+                    <span class="first-name">Ishan</span>
+                    <span class="last-name">Mehta</span>
+                </h1>
+                <div class="brand" id="svg-brand">
+                    <div class="base"></div>
+                    <div class="base2"></div>
+                </div>
+                <div class="hero-divider" data-speed="1.3"></div>
+                <p class="hero-subtitle">
+                    <span class="subtitle-word" data-speed="1.3">Backend</span>
+                    <span class="subtitle-word" data-speed="0.8">Developer</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Spacer -->
+    <div class="hero-spacer"></div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a Backend Engineer with over 2 years of experience at Reliance Jio, where I specialize in building high-scale, resilient microservices. My expertise lies in architecting distributed systems and multi-datacenter (Multi-DC) infrastructures, specifically focusing on cross-DC Redis synchronization and achieving 99.9% data consistency for enterprise platforms serving millions of users.</p>
+                    <p>My work at Jio involves driving the full Software Development Life Cycle (SDLC) for critical security modules. I have designed modular authentication frameworks supporting multi-factor auth and SAML SSO, refactored cryptographic utilities to ensure thread-safety under high concurrency, and led VAPT remediations to resolve high-priority vulnerabilities across core microservices.</p>
+                    <p>Beyond industry experience, I am deeply committed to competitive programming and algorithmic efficiency. I am recognized as a Guardian on LeetCode and an Expert on Codeforces, rankings that demonstrate my ability to solve complex problems and optimize performance at a high level. This background directly informs my approach to system design, where I prioritize efficiency, low-latency APIs, and robust code refactoring.</p>
+                    <p>My project portfolio reflects my versatility across languages like Java, Go, and Python. From building a browser-based cloud desktop platform (SaaS) on GCP to developing a full-featured BitTorrent client in Go, I enjoy tackling engineering challenges that require deep knowledge of cloud orchestration, P2P networking, and secure VM provisioning. I am always seeking specialized backend roles that push the boundaries of high-performance computing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <div class="skills-wrapper">
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Programming Languages</h3>
+                    <p>Java, Python, C++, Golang, JavaScript, SQL</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Frameworks & Libraries</h3>
+                    <p>Spring Boot, FastAPI, Angular, RESTful Microservices</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Google Cloud Platform (GCP), Docker, QEMU, Git, PostgreSQL</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Middleware & Security</h3>
+                    <p>Redis, Apache Kafka, WebRTC, JWT, OAuth 2.0, AES, RSA</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>System Programming</h3>
+                    <p>Compiler Design, Assembly Language Processing, Low-level Programming</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Machine Learning & AI</h3>
+                    <p>Deep Learning, CNN, Computer Vision, TensorFlow, Keras, Real-time ML</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">☁️</div>
+                    <h3>Cloud Desktop Platform (SaaS)</h3>
+                    <p>Designed browser-based cloud desktop platform for Windows and Linux. Built cloud orchestration engine for VM lifecycle automation on GCP with secure authentication, authorization, and billing.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">QEMU</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">OAuth 2.0</span>
+                        <span class="skill-tag">BCrypt</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://lockchatapp.com/" class="project-link" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <h3>BitTorrent Client & Tracker</h3>
+                    <p>Built complete BitTorrent system (tracker, seeder, leecher) with file chunking, torrent metadata generation, and peer discovery using HTTP announce protocol for high-performance concurrent P2P communication.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Golang</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">HTTP</span>
+                        <span class="skill-tag">BitTorrent</span>
+                        <span class="skill-tag">SHA-1</span>
+                        <span class="skill-tag">Goroutines</span>
+                        <span class="skill-tag">Networking</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IshanMehta115/go-torrent" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">⚙️</div>
+                    <h3>Assembler</h3>
+                    <p>Built a two-pass assembler that converts assembly code to machine code. Implements symbol table management, error checking, and binary conversion for opcode and address generation.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Assembly Language</span>
+                        <span class="skill-tag">Two-Pass Assembly</span>
+                        <span class="skill-tag">Symbol Table</span>
+                        <span class="skill-tag">Binary Conversion</span>
+                        <span class="skill-tag">Error Handling</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IshanMehta115/Assembler" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">😊</div>
+                    <h3>Smile-CNN</h3>
+                    <p>Real-time face and smile detection system using CNN. Built with Flask, TensorFlow, and OpenCV for live webcam processing with dynamic predictions displayed in real-time.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">CNN</span>
+                        <span class="skill-tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IshanMehta115/Smile-CNN" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🔐</div>
+                    <h3>Applied Cryptography</h3>
+                    <p>Comprehensive cryptography implementations including AES, RSA, Triple DES, and TRIAD algorithms. Built from scratch as part of Applied Cryptography course covering symmetric encryption, public-key cryptography, hash functions, and MAC.</p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">AES</span>
+                        <span class="skill-tag">RSA</span>
+                        <span class="skill-tag">Triple DES</span>
+                        <span class="skill-tag">Hash Functions</span>
+                        <span class="skill-tag">MAC</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/IshanMehta115/Applied-Cryptography" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="mailto:imehta115@gmail.com" class="contact-item">
+                        <strong>Email:</strong>
+                        <span>imehta115@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ishan-mehta-2357741a7/" target="_blank" class="contact-item">
+                        <strong>LinkedIn:</strong>
+                        <span>linkedin.com/in/ishan-mehta-2357741a7</span>
+                    </a>
+                    <a href="https://github.com/IshanMehta115" target="_blank" class="contact-item">
+                        <strong>GitHub:</strong>
+                        <span>github.com/IshanMehta115</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
