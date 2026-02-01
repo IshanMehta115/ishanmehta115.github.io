@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sticky 3D Letters — TEST</title>
+<link rel="stylesheet" as="style" href="https://fonts.googleapis.com/css?family=Bruno Ace">
+<style>
+  html,body { height:100%; margin:0; }
+  body {
+    background:#071029;
+    color:#fff;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    perspective: 1200px;               /* ONE camera only */
+    perspective-origin: center center;
+    overflow-x: hidden;
+  }
+
+  /* container that provides scroll space */
+  .scroll-section {
+    height: 800vh;      /* how long the effect lasts - increased for longer scroll */
+    position: relative;
+  }
+
+  /* sticky hero: stays on screen while the user scrolls */
+  .scene {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    will-change: transform;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%) !important;
+    overflow: hidden;
+  }
+
+  .scene-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .greeting-text {
+    font-family: 'Bruno Ace', sans-serif !important;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    text-align: center;
+    margin: 0;
+    user-select: none;
+    display: block;
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .subtitle-text {
+    font-family: 'Bruno Ace', sans-serif !important;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    text-align: center;
+    margin: 0;
+    user-select: none;
+    opacity: 0.9;
+    display: block;
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .divider {
+    width: 200px;
+    height: 2px;
+    background: #ffffff;
+    margin: 0.2rem auto 0;
+    opacity: 0.8;
+    display: block;
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  /* the "wall" that we push forward in Z */
+  .word {
+    display:flex;
+    gap:0.15em;
+    font-size:7rem;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    transform-style: preserve-3d;
+    will-change: transform;
+    white-space:nowrap;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+    transform-origin: center center;
+  }
+
+  .letter {
+    display:inline-block;
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  /* dummy content after hero */
+  .after {
+    height: 120vh;
+    background: linear-gradient(180deg,#020617 0%, #04102a 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#9fb0c9;
+    font-size:1.4rem;
+  }
+
+  /* small responsiveness */
+  @media (max-width:720px) {
+    .word { font-size:4rem; gap:0.06em; }
+  }
+</style>
+</head>
+<body>
+
+<section class="scroll-section">
+  <div class="scene" id="scene">
+    <div class="scene-content" id="sceneContent">
+      <p class="greeting-text" data-speed="0.9">Hi, I am</p>
+      <div class="word" id="word">
+        <!-- tweak data-speed per letter (higher -> moves more -> appears closer) -->
+        <span class="letter" data-speed="1.2">I</span>
+        <span class="letter" data-speed="0.8">S</span>
+        <span class="letter" data-speed="1.9">H</span>
+        <span class="letter" data-speed="0.6">A</span>
+        <span class="letter" data-speed="1.5">N</span>
+        <span class="letter" data-speed="0.7" style="min-width: 0.4em;">&nbsp;</span>
+        <span class="letter" data-speed="1.8">M</span>
+        <span class="letter" data-speed="1.1">E</span>
+        <span class="letter" data-speed="0.9">H</span>
+        <span class="letter" data-speed="1.4">T</span>
+        <span class="letter" data-speed="1.6">A</span>
+      </div>
+      <div class="divider" data-speed="1.3"></div>
+      <p class="subtitle-text" data-speed="0.75">Backend Developer</p>
+    </div>
+  </div>
+</section>
+
+<div class="after">This is the next section — scroll back up to see the 3D again.</div>
+
+<script>
+/*
+  Simple and robust 3D sticky demo.
+  - The 'word' element (the wall) moves forward in Z as you scroll.
+  - Each letter moves forward too, but at a different rate (data-speed).
+  - Total visual depth = wallZ + letterZ.
+  - requestAnimationFrame used to avoid scroll jank.
+*/
+
+(function () {
+  const section = document.querySelector('.scroll-section');
+  const scene = document.getElementById('scene');
+  const sceneContent = document.getElementById('sceneContent');
+  const word = document.getElementById('word');
+  const letters = Array.from(document.querySelectorAll('.letter'));
+
+  // Tunable parameters (using reference implementation style)
+  const maxZ = 600; // Maximum Z distance before fully faded
+
+  let ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  function update() {
+    const scrollY = window.scrollY;
+    // Increase factor to decrease sensitivity (more scroll needed)
+    const factor = 50; // Higher = less sensitive = more scroll needed
+    const x = scrollY / factor; // Divide scroll by factor to slow movement
+
+    // Move scene content forward (toward viewer) as you scroll
+    // Using perspective() inside transform like the reference
+    sceneContent.style.transform = `perspective(250px) translateZ(${x}px)`;
+
+    // Letters move at different speeds based on data-speed
+    // Higher speed = moves faster = appears closer
+    const depthMultiplier = 2.5; // Increase this to make depth differences more significant
+    letters.forEach(letter => {
+      const speed = parseFloat(letter.dataset.speed) || 1;
+      // Each letter moves at its own speed: speed multiplier affects Z movement
+      // Multiply by depthMultiplier to increase the difference between letters
+      const letterZ = x * speed * depthMultiplier;
+      letter.style.transform = `translateZ(${letterZ}px)`;
+    });
+
+    // Apply 3D transforms to greeting text, divider, and subtitle
+    const greetingText = document.querySelector('.greeting-text');
+    const divider = document.querySelector('.divider');
+    const subtitleText = document.querySelector('.subtitle-text');
+    
+    [greetingText, divider, subtitleText].forEach(element => {
+      if (element) {
+        const speed = parseFloat(element.getAttribute('data-speed')) || 1;
+        const elementZ = x * speed * depthMultiplier;
+        element.style.transform = `translateZ(${elementZ}px)`;
+      }
+    });
+
+    // Smooth background fade
+    const opacity = Math.max(0, Math.min(1, 1 - (x / maxZ)));
+    scene.style.opacity = opacity;
+  }
+
+  // initial paint
+  update();
+
+  // keep listener
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // also update on resize to keep math correct
+  window.addEventListener('resize', () => { update(); });
+})();
+</script>
+
+</body>
+</html>
